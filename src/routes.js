@@ -15,7 +15,7 @@ routes.get("/casos", CasoController.index);
 routes.post("/casos", CasoController.create);
 routes.delete("/casos/:id", CasoController.delete);
 
-routes.get("/profile/:id", ProfileController.index);
+routes.get("/profile", ProfileController.index);
 
 routes.post("/sessions", SessionController.create);
 
