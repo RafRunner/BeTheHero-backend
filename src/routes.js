@@ -60,6 +60,11 @@ routes.post(
 routes.delete(
   "/casos/:id",
   celebrate({
+    [Segments.HEADERS]: Joi.object({
+      authorization: Joi.string().required()
+    }).unknown()
+  }),
+  celebrate({
     [Segments.PARAMS]: Joi.object().keys({
       id: Joi.number().required()
     })
